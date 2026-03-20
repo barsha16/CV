@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barsha Sitoula — Senior Java Backend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- CANVAS BACKGROUND -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <div class="nav-logo">BS<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about" data-text="About">About</a></li>
+      <li><a href="#skills" data-text="Skills">Skills</a></li>
+      <li><a href="#experience" data-text="Experience">Experience</a></li>
+      <li><a href="#contact" data-text="Contact">Contact</a></li>
+    </ul>
+    <a href="mailto:Barshasitoula888@gmail.com" class="nav-cta">Hire Me</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-meta">
+        <span class="badge pulse">Available for Opportunities</span>
+        <span class="hero-location">📍 Fort Lauderdale, FL</span>
+      </div>
+
+      <h1 class="hero-name">
+        <span class="line-wrap"><span class="reveal-line">Barsha</span></span>
+        <span class="line-wrap"><span class="reveal-line delay-1">Sitoula<span class="name-accent">.</span></span></span>
+      </h1>
+
+      <div class="hero-title-row">
+        <span class="title-label">Senior</span>
+        <span class="title-typed" id="typedTitle"></span>
+        <span class="title-cursor">|</span>
+      </div>
+
+      <p class="hero-tagline reveal-fade">
+        Engineering scalable backend systems at the intersection of<br />
+        <em>financial services, cloud infrastructure & distributed architecture.</em>
+      </p>
+
+      <div class="hero-actions reveal-fade delay-2">
+        <a href="#experience" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Get In Touch</a>
+      </div>
+
+      <div class="hero-stats reveal-fade delay-3">
+        <div class="stat">
+          <span class="stat-num" data-target="8">0</span><span class="stat-sym">+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="3">0</span><span class="stat-sym"></span>
+          <span class="stat-label">Industries Served</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="30">0</span><span class="stat-sym">+</span>
+          <span class="stat-label">Technologies Mastered</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+      <div class="container">
+      <div class="about-grid">
+
+        <div class="about-image-col">
+          <div class="image-frame">
+            <div class="image-bg-accent"></div>
+            <!-- REPLACE src with your actual photo file -->
+            <img src="barsha.png" alt="Barsha Sitoula" class="profile-img" id="profileImg"
+                 onerror="this.style.display='none'; document.getElementById('profilePlaceholder').style.display='flex';" />
+            <div class="profile-placeholder" id="profilePlaceholder">
+              <span>BS</span>
+            </div>
+            <div class="image-border-decor"></div>
+          </div>
+          <div class="about-badges">
+            <div class="about-badge"><span class="ab-icon">☕</span> Java Champion</div>
+            <div class="about-badge"><span class="ab-icon">☁️</span> Cloud Native</div>
+            <div class="about-badge"><span class="ab-icon">🔒</span> Security-First</div>
+          </div>
+        </div>
+
+        <div class="about-content-col">
+          <div class="section-label">About Me</div>
+          <h2 class="section-heading">Building systems that <em>never sleep</em></h2>
+          <p class="about-text">
+            I'm a Senior Java Backend Developer with deep expertise in designing and delivering high-performance, distributed systems across financial services, healthcare, and enterprise cloud environments.
+          </p>
+          <p class="about-text">
+            From architecting microservices at LPL Financial to building HIPAA-compliant telehealth platforms at Teladoc Health, I specialize in turning complex engineering challenges into elegant, scalable solutions.
+          </p>
+          <p class="about-text">
+            My toolbox spans the full backend lifecycle — <strong>Spring Boot microservices</strong>, <strong>Apache Kafka event streams</strong>, <strong>AWS & GCP cloud deployments</strong>, and <strong>DevOps automation</strong> — all underpinned by a relentless focus on reliability and security.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="hl-icon">🏦</div>
+              <div>
+                <strong>Financial Services</strong>
+                <span>BillPay, ACH transfers, brokerage platforms</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="hl-icon">🏥</div>
+              <div>
+                <strong>Healthcare</strong>
+                <span>HIPAA-compliant telehealth systems</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="hl-icon">⚡</div>
+              <div>
+                <strong>Event-Driven Architecture</strong>
+                <span>Kafka, SQS/SNS, real-time pipelines</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-links">
+            <a href="mailto:Barshasitoula888@gmail.com" class="link-pill">✉️ Email Me</a>
+            <a href="https://linkedin.com" target="_blank" class="link-pill">🔗 LinkedIn</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header-row">
+        <div class="section-label">Technical Arsenal</div>
+        <h2 class="section-heading">Skills & Technologies</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card" data-delay="0">
+          <div class="skill-card-icon">⚙️</div>
+          <h3>Backend Development</h3>
+          <div class="skill-tags">
+            <span class="tag primary">Java 17</span>
+            <span class="tag primary">Spring Boot</span>
+            <span class="tag">Spring MVC</span>
+            <span class="tag">Spring Security</span>
+            <span class="tag">Hibernate</span>
+            <span class="tag">Apache Camel</span>
+            <span class="tag">Apache Airflow</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="100">
+          <div class="skill-card-icon">🌐</div>
+          <h3>APIs & Integration</h3>
+          <div class="skill-tags">
+            <span class="tag primary">REST APIs</span>
+            <span class="tag primary">GraphQL</span>
+            <span class="tag">SOAP</span>
+            <span class="tag">OpenAPI/Swagger</span>
+            <span class="tag">Feign Client</span>
+            <span class="tag">WebSockets</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="200">
+          <div class="skill-card-icon">📨</div>
+          <h3>Messaging & Streaming</h3>
+          <div class="skill-tags">
+            <span class="tag primary">Apache Kafka</span>
+            <span class="tag primary">AWS SQS/SNS</span>
+            <span class="tag">RabbitMQ</span>
+            <span class="tag">JMS</span>
+            <span class="tag">GCP Pub/Sub</span>
+            <span class="tag">AWS EventBridge</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="300">
+          <div class="skill-card-icon">☁️</div>
+          <h3>Cloud Platforms</h3>
+          <div class="skill-tags">
+            <span class="tag primary">AWS EKS</span>
+            <span class="tag primary">Google Cloud</span>
+            <span class="tag">AWS Lambda</span>
+            <span class="tag">API Gateway</span>
+            <span class="tag">S3 / Redshift</span>
+            <span class="tag">GKE / BigQuery</span>
+            <span class="tag">Cloud Run</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="400">
+          <div class="skill-card-icon">🐳</div>
+          <h3>DevOps & Infrastructure</h3>
+          <div class="skill-tags">
+            <span class="tag primary">Kubernetes</span>
+            <span class="tag primary">Docker</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">Jenkins</span>
+            <span class="tag">GitLab CI/CD</span>
+            <span class="tag">ArgoCD</span>
+            <span class="tag">OpenShift</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="500">
+          <div class="skill-card-icon">🗄️</div>
+          <h3>Databases</h3>
+          <div class="skill-tags">
+            <span class="tag primary">PostgreSQL</span>
+            <span class="tag primary">DynamoDB</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Snowflake</span>
+            <span class="tag">BigQuery</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="600">
+          <div class="skill-card-icon">🔒</div>
+          <h3>Security</h3>
+          <div class="skill-tags">
+            <span class="tag primary">OAuth2</span>
+            <span class="tag primary">JWT</span>
+            <span class="tag">SSO</span>
+            <span class="tag">LDAP</span>
+            <span class="tag">Active Directory</span>
+            <span class="tag">AWS IAM</span>
+            <span class="tag">HIPAA</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="700">
+          <div class="skill-card-icon">📊</div>
+          <h3>Observability</h3>
+          <div class="skill-tags">
+            <span class="tag primary">Prometheus</span>
+            <span class="tag primary">Grafana</span>
+            <span class="tag">Splunk</span>
+            <span class="tag">Dynatrace</span>
+            <span class="tag">ELK Stack</span>
+            <span class="tag">CloudWatch</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">Career Journey</div>
+      <h2 class="section-heading">Professional Experience</h2>
+
+      <div class="timeline">
+
+        <!-- LPL Financial -->
+        <div class="timeline-item active" data-index="0">
+          <div class="timeline-marker">
+            <div class="marker-ring"></div>
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="exp-header">
+              <div class="exp-company-logo lpl">LPL</div>
+              <div class="exp-title-block">
+                <h3>Senior Full Stack Java Developer</h3>
+                <span class="exp-company">LPL Financial</span>
+                <span class="exp-meta">Fort Mill, SC &nbsp;·&nbsp; March 2022 – Present</span>
+              </div>
+              <div class="exp-badge current">Current Role</div>
+            </div>
+            <div class="exp-body">
+              <p>Leading backend development for brokerage platforms handling payment processing, digital transfers, and investment account management at enterprise scale.</p>
+              <ul class="exp-bullets">
+                <li>Designed microservices with <strong>Java 17 & Spring Boot</strong> supporting BillPay, ACH transfers, and account reconciliation</li>
+                <li>Implemented event-driven workflows using <strong>Apache Kafka & AWS EventBridge</strong> for real-time transaction processing</li>
+                <li>Built ETL pipelines via <strong>Apache Airflow, AWS Glue & Informatica</strong> ingesting large financial datasets into Redshift</li>
+                <li>Deployed containerized services on <strong>Docker, Kubernetes (EKS/OpenShift)</strong> with zero-downtime CI/CD</li>
+                <li>Engineered distributed caching with <strong>Redis & ElastiCache</strong> to dramatically reduce database load</li>
+                <li>Secured financial APIs using <strong>OAuth2 & JWT</strong> across sensitive brokerage applications</li>
+              </ul>
+              <div class="exp-tech-row">
+                <span>Java 17</span><span>Spring Boot</span><span>Kafka</span><span>AWS EKS</span><span>Terraform</span><span>Redis</span><span>Grafana</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valley Bank -->
+        <div class="timeline-item" data-index="1">
+          <div class="timeline-marker">
+            <div class="marker-ring"></div>
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="exp-header">
+              <div class="exp-company-logo valley">VB</div>
+              <div class="exp-title-block">
+                <h3>Senior Java Developer</h3>
+                <span class="exp-company">Valley Bank</span>
+                <span class="exp-meta">Wayne, NJ &nbsp;·&nbsp; September 2019 – February 2022</span>
+              </div>
+            </div>
+            <div class="exp-body">
+              <p>Delivered enterprise banking services covering loan processing, wire transfers, and financial reporting infrastructure on Google Cloud Platform.</p>
+              <ul class="exp-bullets">
+                <li>Built backend microservices for <strong>loan processing & wire transfers</strong> with Spring Boot REST APIs</li>
+                <li>Designed event-driven pipelines with <strong>Kafka & GCP Pub/Sub</strong> for async payment processing</li>
+                <li>Deployed scalable infrastructure on <strong>Google Kubernetes Engine</strong> with Terraform automation</li>
+                <li>Developed ETL pipelines via <strong>Apache Airflow</strong> feeding BigQuery analytical datasets</li>
+                <li>Optimized <strong>PostgreSQL & Oracle</strong> SQL for high-performance financial reporting</li>
+                <li>Built frontend dashboards with <strong>React</strong> for internal banking operations</li>
+              </ul>
+              <div class="exp-tech-row">
+                <span>Java</span><span>Spring Boot</span><span>GCP</span><span>GKE</span><span>BigQuery</span><span>Kafka</span><span>React</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teladoc -->
+        <div class="timeline-item" data-index="2">
+          <div class="timeline-marker">
+            <div class="marker-ring"></div>
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="exp-header">
+              <div class="exp-company-logo teladoc">TH</div>
+              <div class="exp-title-block">
+                <h3>Java Developer</h3>
+                <span class="exp-company">Teladoc Health</span>
+                <span class="exp-meta">Purchase, NY &nbsp;·&nbsp; September 2017 – August 2019</span>
+              </div>
+            </div>
+            <div class="exp-body">
+              <p>Built the backend infrastructure for telehealth platforms — ensuring HIPAA compliance for patient data while enabling seamless provider-patient communication at scale.</p>
+              <ul class="exp-bullets">
+                <li>Developed <strong>HIPAA-compliant REST & SOAP APIs</strong> for patient records and appointment scheduling</li>
+                <li>Implemented <strong>role-based access control</strong> with Spring Security for protected medical data</li>
+                <li>Integrated enterprise messaging with <strong>JMS, AWS SNS & SQS</strong> for healthcare workflow events</li>
+                <li>Built batch processing jobs to <strong>reconcile patient data</strong> across healthcare systems</li>
+                <li>Designed relational schemas in <strong>MySQL</strong> optimized with Hibernate ORM</li>
+                <li>Built <strong>Angular components</strong> for patient dashboards and provider portals</li>
+              </ul>
+              <div class="exp-tech-row">
+                <span>Java</span><span>Spring</span><span>HIPAA</span><span>AWS SNS/SQS</span><span>MySQL</span><span>Angular</span><span>ELK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-content">
+          <div class="section-label">Education</div>
+          <h3>Master's in Business Analytics</h3>
+          <p>Atlantis University</p>
+        </div>
+        <div class="edu-decor"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="section-label">Let's Connect</div>
+        <h2 class="section-heading contact-heading">
+          Ready to build<br /><em>something great?</em>
+        </h2>
+        <p class="contact-sub">I'm open to senior engineering roles, consulting opportunities, and exciting technical challenges.</p>
+
+        <div class="contact-options">
+          <a href="mailto:Barshasitoula888@gmail.com" class="contact-card">
+            <div class="cc-icon">✉️</div>
+            <div class="cc-text">
+              <span class="cc-label">Email</span>
+              <span class="cc-value">Barshasitoula888@gmail.com</span>
+            </div>
+            <div class="cc-arrow">→</div>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="contact-card">
+            <div class="cc-icon">🔗</div>
+            <div class="cc-text">
+              <span class="cc-label">LinkedIn</span>
+              <span class="cc-value">Connect with me</span>
+            </div>
+            <div class="cc-arrow">→</div>
+          </a>
+        </div>
+
+        <div class="contact-availability">
+          <span class="avail-dot"></span>
+          Currently open to new opportunities
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">BS<span class="dot">.</span></div>
+        <p class="footer-copy">© 2025 Barsha Sitoula. Built with precision.</p>
+        <div class="footer-links">
+          <a href="mailto:Barshasitoula888@gmail.com">Email</a>
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -284,3 +284,35 @@ window.addEventListener('scroll', () => {
     link.style.color = link.getAttribute('href') === `#${current}` ? 'var(--cyan)' : '';
   });
 });
+
+// ---- Contact: Copy Email / Show Phone (spam-safe) ----
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', async () => {
+    const email = 'Barshasitoula888@gmail.com';
+    try {
+      await navigator.clipboard.writeText(email);
+    } catch (e) {
+      const ta = document.createElement('textarea');
+      ta.value = email;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+    const original = copyEmailBtn.textContent;
+    copyEmailBtn.textContent = 'Copied ✓';
+    setTimeout(() => { copyEmailBtn.textContent = original; }, 2000);
+  });
+}
+
+const showPhoneBtn = document.getElementById('showPhoneBtn');
+if (showPhoneBtn) {
+  let revealed = false;
+  showPhoneBtn.addEventListener('click', () => {
+    revealed = !revealed;
+    showPhoneBtn.textContent = revealed ? '954-256-5195' : 'Show Phone';
+  });
+}

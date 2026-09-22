@@ -898,6 +898,72 @@ section { position: relative; z-index: 2; }
 }
 
 /* ============================================
+   RECOGNITION
+   ============================================ */
+#recognition {
+  padding: 80px 0;
+  background: var(--bg);
+}
+#recognition .section-heading { margin-bottom: 40px; }
+.recog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.recog-card {
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-card-2));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.recog-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: linear-gradient(to bottom, var(--cyan), var(--violet));
+}
+.recog-card:hover {
+  border-color: rgba(0,212,255,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,212,255,0.08);
+}
+.recog-icon { font-size: 2.2rem; margin-bottom: 16px; }
+.recog-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.recog-org {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-3);
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+.recog-desc {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+.recog-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--cyan);
+  text-decoration: none;
+}
+.recog-link:hover { text-decoration: underline; }
+@media (max-width: 720px) {
+  .recog-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
    CONTACT
    ============================================ */
 #contact {
